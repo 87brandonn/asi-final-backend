@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
       args: [text]
     },
     (err, data) => {
-      if (err) throw err;
+      if (err) res.send(err);
       res.send(data);
     }
   );
