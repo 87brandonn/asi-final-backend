@@ -10,7 +10,7 @@ app.use(
   })
 );
 app.use(bodyParser.json());
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
   res.send('Hello world!');
