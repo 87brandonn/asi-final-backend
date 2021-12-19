@@ -12,6 +12,10 @@ app.use(
 app.use(bodyParser.json());
 const port = 5000;
 
+app.get('/', (req, res) => {
+  res.send('Hello world!');
+});
+
 app.post('/', (req, res) => {
   const text = req.body.text;
   const __dirname = path.resolve();
